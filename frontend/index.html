@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume Matcher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Resume to Job Matcher</h1>
+    <p class="subtitle">Upload your resume and paste a job description to see which skills match and which are missing.</p>
+
+    <form id="form">
+      <label for="resume">Resume (PDF)</label>
+      <input type="file" id="resume" name="resume" accept=".pdf" required />
+
+      <label for="jd">Job description</label>
+      <textarea id="jd" name="job_description" rows="8" placeholder="Paste the job description here..." required></textarea>
+
+      <button type="submit" id="btn">Analyze</button>
+    </form>
+
+    <p id="status" class="status"></p>
+
+    <section id="results" class="hidden">
+      <h2>Skill coverage</h2>
+      <div class="bar"><div id="barFill" class="bar-fill"></div></div>
+      <p id="coverageText"></p>
+
+      <h3>Matched skills</h3>
+      <div id="matched" class="chips"></div>
+
+      <h3>Missing skills</h3>
+      <div id="missing" class="chips"></div>
+
+      <p class="small" id="tfidfText"></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
