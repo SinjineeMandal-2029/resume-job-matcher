@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000/analyze";
+const API_URL = "https://resume-job-matcher-kde4.onrender.com/analyze";
 
 const form = document.getElementById("form");
 const btn = document.getElementById("btn");
